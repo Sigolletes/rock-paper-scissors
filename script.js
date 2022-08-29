@@ -50,28 +50,28 @@ function playRound(playerSelection) {
   if (playerSelection == computerSelection) {
     winner.textContent = "You were tied";
 
-  } else if (playerSelection == options[0] && computerSelection == options[2]) {
+  } else if (playerSelection == "rock" && computerSelection == "scissors") {
     playerScore++;
     winner.textContent = "You win! Rock beats scissors";
 
-  } else if (playerSelection == options[1] && computerSelection == options[0]) {
+  } else if (playerSelection == "paper" && computerSelection == "rock") {
     playerScore++;
     winner.textContent = "You win! Paper beats rock";
 
-  } else if (playerSelection == options[2] && computerSelection == options[1]) {
+  } else if (playerSelection == "scissors" && computerSelection == "paper") {
     playerScore++;
     winner.textContent = "You win! Scissors beats paper";
 
 
-  } else if (playerSelection == options[0] && computerSelection == options[1]) {
+  } else if (playerSelection == "rock" && computerSelection == "paper") {
     computerScore++;
     winner.textContent = "You lose! Paper beats rock";
 
-  } else if (playerSelection == options[1] && computerSelection == options[2]) {
+  } else if (playerSelection == "paper" && computerSelection == "scissors") {
     computerScore++;
     winner.textContent = "You lose! Scissors beats paper";
 
-  } else if (playerSelection == options[2] && computerSelection == options[0]) {
+  } else if (playerSelection == "scissors" && computerSelection == "rock") {
     computerScore++;
     winner.textContent = "You lose! Rock beats scissors";
   }
@@ -111,8 +111,10 @@ function theWinnerIs () {
 // NEW GAME
 
 start.addEventListener('click', () => {
-  player.textContent = `0`;
-  computer.textContent = `0`;
+  playerScore = 0;
+  computerScore = 0;
+  player.textContent = `${playerScore}`;
+  computer.textContent = `${computerScore}`;
   buttons.setAttribute("style", "visibility: visible");
   winner.textContent = "Good Lock!";
   winner.setAttribute("style", "font-size: 4vw");
