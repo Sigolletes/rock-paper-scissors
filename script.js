@@ -116,6 +116,6 @@ start.addEventListener('click', () => {
   player.textContent = `${playerScore}`;
   computer.textContent = `${computerScore}`;
   buttons.setAttribute("style", "visibility: visible");
-  winner.textContent = "Good Lock!";
+  winner.textContent = "Good Luck!";
   winner.setAttribute("style", "font-size: 4vw");
 });
