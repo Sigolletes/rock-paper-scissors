@@ -1,0 +1,83 @@
+* {
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+:root {
+  --color1: rgb(34, 30, 30);
+  --color2: rgb(235, 235, 171);
+  --color3: rgb(220, 43, 43);
+  --color4: rgb(241, 140, 39);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color1);
+  padding: 2vh;
+  gap: 5px;
+  border: 3px double var(--color2);
+}
+
+h1 {
+  color: var(--color3);
+  font-size: 7vw;
+  text-align: center;
+}
+
+hr {
+  width: 80vw;
+  height: 4px;
+  border: 1px solid var(--color2);
+  background-color: var(--color4);
+  margin-bottom: 5vh;
+}
+
+button {
+  padding: 2vw;
+  border-radius: 2vw;
+  border: 5px double var(--color3);
+  font-size: 5vw;
+  background-color: whitesmoke;
+}
+
+#results {
+  display: flex;
+  align-items: center;
+  gap: 5vw;
+}
+
+#score {
+  color: var(--color2);
+  font-size: 4vw;
+  margin-left: auto;
+}
+
+span {
+  color: var(--color4);
+}
+
+h3 {
+  color: var(--color2);
+  text-align: center;
+  font-size: 5vw;
+}
+
+#winner {
+  font-size: 4vw;
+  color: var(--color4);
+  padding-top: 5vh;
+}
+
+
+#choose {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 3vw;
+  justify-content: space-around;
+  margin-bottom: 5vw;
+}
