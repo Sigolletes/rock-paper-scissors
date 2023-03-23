@@ -15,15 +15,11 @@ const buttons = document.querySelector("#buttons");
 let playerScore = 0;
 let computerScore = 0;
 
-
-
 // COMPUTER CHOICE  
 
 function getComputerChoice() {
   return options[Math.floor(Math.random()*options.length)];
 }
-
-
 
 // GAME 
 
@@ -38,8 +34,6 @@ function getComputerChoice() {
   scissors.addEventListener('click', () => {
     playRound(options[2]);
   });
-
-
 
 // PLAY ROUND
 
@@ -86,8 +80,6 @@ function playRound(playerSelection) {
   }
 }
 
-
-
 // FINAL FUNCTION: THE WINNER IS
 
 function theWinnerIs () {
@@ -105,8 +97,6 @@ function theWinnerIs () {
     winner.textContent = "YOU WERE TIED!!!";
   }  
 }
-
-
 
 // NEW GAME
 
