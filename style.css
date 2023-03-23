@@ -3,6 +3,7 @@
 * {
   border: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
   font-family: 'Edu NSW ACT Foundation', cursive;
 }
@@ -16,15 +17,37 @@
 }
 
 body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.bottom {
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(0.25turn, var(--back), var(--letters), var(--back));
+  border-image-slice: 1;
+}
+
+#container {
+  width: 100vw;
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
   display: grid;
-  grid-template-rows: auto auto auto auto auto;
+  grid-template-rows: 100px 200px 70px 1fr 70px;
   background-color: var(--back);
   align-items: center;
   justify-items: center;
 }
+
+#container > div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* TITLE AND SCORE ######################################## */
 
 h1 {
   font-family: 'Rajdhani', sans-serif;
@@ -34,27 +57,22 @@ h1 {
   text-align: center;
 }
 
-button {
-  font-family: 'Josefin Sans', sans-serif;
-  padding: 15px;
-  border-radius: 10px;
-  border: none;
-  background-color: var(--button);
-}
-
-#choose button {
-  font-size: 30px;
-}
-
-#newGame {
-  font-size: 25px;
-}
-
 #score {
   color: var(--letters);
-  font-size: 4vw;
-  margin-left: auto;
+  font-size: 30px;
+  flex-direction: column;
+  gap: 10px;
 }
+
+
+/* WINNER ############################################ */
+
+#winner {
+  font-size: 40px;
+  color: var(--winner);
+}
+
+/* CHOICE ############################################ */
 
 h3 {
   color: var(--letters);
@@ -62,13 +80,34 @@ h3 {
   font-size: 30px;
 }
 
-#winner {
-  font-size: 40px;
-  color: var(--winner);
+#buttons {
+  flex-direction: column;
+  gap: 30px;
+}
+
+button {
+  font-family: 'Josefin Sans', sans-serif;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--button);
 }
 
 #choose {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  gap: 40px;
+}
+
+#choose button {
+  font-size: 30px;
+  width: 150px;
+  height: 60px;
+}
+
+/* NEW GAME ############################################ */
+
+#newGame {
+  font-size: 25px;
+  height: 40px;
+  width: 150px;
 }
